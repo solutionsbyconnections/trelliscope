@@ -10,7 +10,7 @@ Trelliscope is an R package that enables interactive exploration of data frames 
 ## Installation
 
 ``` r
-remotes::install_github("trelliscope/trelliscope")
+remotes::install_github("solutionsbyconnections/trelliscope")
 ```
 
 ## Usage

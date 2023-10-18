@@ -1,5 +1,5 @@
 Package: trelliscope
-Title: Create Interactive Trelliscope Displays
+Title: Create Interactive Trelliscope Displays - Mirror for Shiny Deploy Issue
 Version: 0.1.3
 Authors@R:
     person("Ryan", "Hafen", , "rhafen@gmail.com", role = c("aut", "cre", "cph"),
@@ -40,6 +40,6 @@ Imports:
 Depends: 
     R (>= 4.1)
 LazyData: true
-URL: https://trelliscope.org/trelliscope, https://github.com/trelliscope/trelliscope
-BugReports: https://github.com/trelliscope/trelliscope/issues
+URL: https://github.com/solutionsbyconnections/trelliscope, https://trelliscope.org/trelliscope
+BugReports: https://github.com/solutionsbyconnections/trelliscope/issues
 VignetteBuilder: knitr
