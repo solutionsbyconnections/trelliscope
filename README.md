@@ -1,8 +1,8 @@
 # trelliscope <img src="man/figures/logo.svg" align="right" alt="" width="120" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/trelliscope/trelliscope/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/trelliscope/trelliscope/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/trelliscope/trelliscope/branch/main/graph/badge.svg)](https://app.codecov.io/gh/trelliscope/trelliscope?branch=main)
+[![R-CMD-check](https://github.com/solutionsbyconnections/trelliscope/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/solutionsbyconnections/trelliscope/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/solutionsbyconnections/trelliscope/branch/main/graph/badge.svg)](https://app.codecov.io/gh/solutionsbyconnections/trelliscope?branch=main)
 <!-- badges: end -->
 
 Trelliscope is an R package that enables interactive exploration of data frames of visualizations.
@@ -11,6 +11,7 @@ Trelliscope is an R package that enables interactive exploration of data frames 
 
 ``` r
 remotes::install_github("solutionsbyconnections/trelliscope")
+devtools::install_github("solutionsbyconnections/trelliscope")
 ```
 
 ## Usage

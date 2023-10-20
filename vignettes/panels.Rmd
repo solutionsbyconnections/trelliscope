@@ -148,7 +148,7 @@ gsumm
 
 Suppose we instead want to use local image files. We can use `panel_local()` to create a panel column that points to local files.
 
-We will download all of the flag images to a temporary directory to illustrate.
+We will download all of the flag images to a temporary directory to illustrate.  Test
 
 ```{r}
 flag_path <- tempdir()
