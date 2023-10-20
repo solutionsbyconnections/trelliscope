@@ -126,48 +126,7 @@ When applied to any row of `gsumm`, the `iso_alpha2` column will be passed to `p
 
 Another thing to note is that if you are using dplyr to filter inside your plot function, please be aware of issues that can arise from [data masking](https://dplyr.tidyverse.org/articles/programming.html#indirection). For example, you will notice in our example that we need to use the embrace operator `{{` in our `filter()` to keep the code execution from getting confused about whether we are referring to a column name in the data or not. If you are not using dplyr, something like `x <- gap[gap$country == country, ]` would work fine.
 
-## Panels of images existing on the web with `panel_url()`
 
-<!-- lapply(gsumm$country, function(x) {
-  browseURL(paste0("https://en.wikipedia.org/wiki/", x))
-  Sys.sleep(0.2)
-}) -->
-
-If image or html assets exist on the web, you can create panel columns pointing to these using `panel_url()`. For example, suppose we want to add a column of flags for each country. [This forked repository](https://github.com/hafen/countryflags) contains image files for each country flag, where each file is named using the country's 2-letter code. We can use the `iso_alpha2` column in the gapminder dataset to construct the URL for each flag.
-
-```{r}
-flag_base_url <- "https://raw.githubusercontent.com/hafen/countryflags/master/png/512/"
-
-gsumm <- mutate(gsumm,
-  flag_url = panel_url(paste0(flag_base_url, iso_alpha2, ".png"))
-)
-gsumm
-```
-
-## Panels of images on the local filesystem with `panel_local()`
-
-Suppose we instead want to use local image files. We can use `panel_local()` to create a panel column that points to local files.
-
-We will download all of the flag images to a temporary directory to illustrate.  Test
-
-```{r}
-flag_path <- tempdir()
-download.file("https://github.com/trelliscope/trelliscope/files/12265140/flags.zip",
-  destfile = file.path(flag_path, "flags.zip"))
-unzip(file.path(flag_path, "flags.zip"), exdir = file.path(flag_path, "flags"))
-list.files(file.path(flag_path, "flags"))
-```
-
-We can now create a panel column that points to these local files.
-
-```{r}
-gsumm <- mutate(gsumm,
-  flag = panel_local(file.path(flag_path, "flags", paste0(iso_alpha2, ".png"))),
-)
-gsumm
-```
-
-Note that once we make `gsumm` into a Trelliscope data frame and view it, local panel files will be copied into the directory of the Trelliscope display so that it is self-contained. If you want to avoid a making copy, you can create the appropriate directory structure and put the files there yourself.
 
 ## Setting panel options
 

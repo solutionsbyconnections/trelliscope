@@ -61,4 +61,4 @@ mars_rover <- mars_rover[, c("id", "camera", "sol", "earth_date", "class",
   "width", "height", "filesize", "hex", "hue", "img_src")]
 
 use_data(mars_rover, overwrite = TRUE)
-remotes::install_github("trelliscope/trelliscope@new-ui")
+remotes::install_github("solutionsbyconnections/trelliscope@new-ui")
